@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    font-family: 'Poppins', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+  background-color: #f8fafc; /* Gris muy claro de fondo para que resalten los colores */
+}
+
+#root {
+  min-height: 100vh;
+}
