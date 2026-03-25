@@ -25,6 +25,7 @@ export default function Dashboard() {
         .from('orders_confirmed')
         .select('*')
         .eq('order_status', 'Despachado')
+        .neq('customer_address', 'PARA LLEVAR')
         .gte('created_at', seventyMinutesAgo);
       
       if (data) {
@@ -286,7 +287,8 @@ export default function Dashboard() {
                           <span className="text-[10px] font-black bg-gray-200 px-2 py-0.5 rounded uppercase">{delivery.payment_method}</span>
                         </div>
                         <div className="pt-2 border-t border-gray-200">
-                          <p className="text-[9px] font-black text-gray-400 uppercase text-center">{delivery.business_name}</p>
+                          <p className="text-[15px] font-black text-black-400 uppercase text-left">Negocio: </p>
+                          <p className="text-[12px] font-black text-red-400 uppercase text-left">{delivery.business_name}</p>
                         </div>
                       </div>
                     </div>
