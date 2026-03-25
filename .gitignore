@@ -1,24 +1,60 @@
-# Logs
-logs
-*.log
+# --- Logs & Diagnósticos ---
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+*.log
+logs
+*.splunk
+*.out
 
-node_modules
-dist
-dist-ssr
-*.local
+# --- Dependencias ---
+# Nunca deben subirse al repo
+node_modules/
+jspm_packages/
 
-# Editor directories and files
+# --- Builds y Salidas ---
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.svelte-kit/
+.nitro
+.cache/
+
+# --- Entornos ---
+.env
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Editores y IDEs ---
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+!.vscode/settings.json
+!.vscode/launch.json
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.orig
+
+# --- Archivos de Sistema ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# --- Testing ---
+/coverage
+/.nyc_output
+
+# --- Otros ---
+*.local
